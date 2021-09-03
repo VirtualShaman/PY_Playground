@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+</head>
+<body>
+    <div id="container">
+        {% if color=="blue" %}
+            {% for x in range(0,count) %}
+                <div id="bluebox"></div>
+            {% endfor %}
+        {% elif color=="green" %}
+            {% for x in range(0,count) %}
+                <div id="greenbox"></div>
+            {% endfor %}
+        {% elif color=="red" %}
+            {% for x in range(0,count) %}
+                <div id="redbox"></div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <style>
+        #container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        #bluebox {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
+            background-color: #9fc5f8;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #greenbox {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
+            background-color: #93c47d;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #redbox {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
+            background-color: #cc6b6b;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</body>
+</html>
